@@ -1,0 +1,111 @@
+* {
+    outline: none;
+    --main-color: #FE938C;
+    --accent: #9CAFB7;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+}
+main {
+    background: white;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    width: 100%;
+   height:100%;
+   display: grid;
+   position: relative;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--main-color);
+    opacity: 0.5;
+}
+form input {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    border: 1px solid var(--accent);
+    box-shadow: 1px 6px 0.4px rgb(64, 64, 64);
+    margin: 10px;
+    font-size: 24px;
+}
+label {
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: var(--main-color);
+    color: white;
+}
+.tables{
+    width:50%;
+}
+td{
+    border:1px solid var(--main-color);
+    color:var(--accent);
+    font-size: 2.5em;
+    font-weight: 400;
+    border-radius: 10px;
+    padding:80px;
+    height:50px;
+    width:150px;
+}
+th{
+    background: var(--main-color);
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 10px;
+}
+a{
+    color:#4281A4;
+}
+img{
+    width:50%;
+    height:50%;
+}
+.create {
+    width: 30%;
+    height: 50%;
+    border: 1px solid hsl(1, 20%, 50%);
+    position: absolute;
+    right: 200px;
+    display: grid;
+     box-shadow: 5px 5px 1px 3px rgb(64, 64, 64);
+
+}
+button {
+    background: transparent;
+    color: #4C364D;
+    border: 5px solid var(--accent);
+    border-radius: 10px;
+
+}
+button:hover{
+    background-color: var(--accent);
+}
+#new {
+    height: 40%;
+    width: 40%;
+
+}
+aside .top{
+    background-color: var(--main-color);
+    text-align: center;
+    font-size: 2em;
+    height:50px;
+    width:100%;
+}
+.attending{
+    background-color: var(--accent);
+    width:50%;
+    height:200px;
+    right:5px;
+    position: absolute;
+    bottom:240px;
+    color:white;
+}
+

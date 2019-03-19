@@ -1,0 +1,10 @@
+C:\Users\gomez\Desktop\c #\wedding\bin\Debug\netcoreapp2.0\wedding.deps.json
+C:\Users\gomez\Desktop\c #\wedding\bin\Debug\netcoreapp2.0\wedding.runtimeconfig.json
+C:\Users\gomez\Desktop\c #\wedding\bin\Debug\netcoreapp2.0\wedding.runtimeconfig.dev.json
+C:\Users\gomez\Desktop\c #\wedding\bin\Debug\netcoreapp2.0\wedding.dll
+C:\Users\gomez\Desktop\c #\wedding\bin\Debug\netcoreapp2.0\wedding.pdb
+C:\Users\gomez\Desktop\c #\wedding\obj\Debug\netcoreapp2.0\wedding.csproj.CoreCompileInputs.cache
+C:\Users\gomez\Desktop\c #\wedding\obj\Debug\netcoreapp2.0\wedding.AssemblyInfoInputs.cache
+C:\Users\gomez\Desktop\c #\wedding\obj\Debug\netcoreapp2.0\wedding.AssemblyInfo.cs
+C:\Users\gomez\Desktop\c #\wedding\obj\Debug\netcoreapp2.0\wedding.dll
+C:\Users\gomez\Desktop\c #\wedding\obj\Debug\netcoreapp2.0\wedding.pdb

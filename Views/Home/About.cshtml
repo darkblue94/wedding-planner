@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/wedding.css?v=3">
+</head>
+<body>
+    <nav>
+        <h1> WEDDING PLANNER </h1>
+        <a href=""> About Us </a>
+        <a href=""> More Information </a>
+        <h1> @Model.first_name, </h1>
+        <h3>Welcome To Wedding Planner </h3>
+        <h1 style="letter-spacing: 10px;margin-left:35px;"> Wedding Details </h1>
+    </nav>
+    <main>
+        <section class="tables">
+            @foreach(var com in @ViewBag.wed){
+            <table id="info">
+                <thead>
+                    <th>Bride & Groom</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <td><a href="/view/@com.WeddingId">@com.bride & @com.groom </a> </td>
+                    <td>@com.date</td>
+                    <td><a href="/become_guest/@com.WeddingId">Attend</a></td>
+                </tbody>
+            </table>
+            }
+        </section>
+        <section class="attending">
+           @foreach(var atd in @Model.attending_wedding){
+            <p> @atd.wedding.bride </p>
+           }
+        </section>
+        <aside class="create">
+            <span class="top">
+                <h2> Register A New Wedding</h2>
+            </span>
+            <a href="/new_wedding">
+                <b>
+                    <button><img id="new" src="~/images/new.png"></button>
+                </b>
+            </a>
+        </aside>
+    </main>
+</body>
+
+</html>

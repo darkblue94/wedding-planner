@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        * {
+            outline: none;
+            --main-color: #FE938C;
+            --accent: #9CAFB7;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        main {
+            background: white;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            width: 100%;
+            display: grid;
+            height: 100%;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: var(--main-color);
+            opacity: 0.5;
+        }
+
+        .tables {
+            width: 50%;
+        }
+
+
+        a {
+            color: green;
+        }
+
+        td {
+            border: 1px solid var(--main-color);
+            color: var(--accent);
+            font-size: 2.5em;
+            font-weight: 400;
+            border-radius: 10px;
+            padding: 80px;
+            height: 50px;
+            width: 150px;
+        }
+
+        th {
+            background: var(--main-color);
+            color: var(--accent);
+            font-size: 20px;
+            font-weight: 400;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        button {
+            background: transparent;
+            color: #4C364D;
+            border: none;
+        }
+
+        button:hover {
+            background: #4C364D;
+            color: #FDF0C4;
+        }
+
+        .guest {
+            width: 50%;
+            text-align: center;
+            padding: 50px;
+            color: var(--main-color);
+            margin: 50px;
+            font-size: 3em;
+            right: -100px;
+            position: absolute;
+            top: 0px;
+        }
+
+        .guest h1 {
+            border: 1px solid var(--main-color);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+        <h1> WEDDING PLANNER </h1>
+        <a href=""> About Us </a>
+        <a href=""> More Information </a>
+
+        <h1 style="letter-spacing: 10px;margin-left:35px;"> Wedding Details </h1>
+    </nav>
+    <main>
+        <a href="/dashboard">Dashboard</a>
+        @model Weddings
+        <section class="tables">
+            <table>
+                <thead>
+                    <th>Bride & Groom</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                </thead>
+                <tbody>
+                    <td>@Model.groom & @Model.bride</td>
+                    <td>@Model.adress</td>
+                    <td>@Model.date</td>
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="guest">
+            <h2> Guest Attending:</h2>
+            @foreach(var com in @Model.guest )
+            {
+            <strong>
+                <h1>@com.user.first_name</h1>
+            </strong>
+            }
+        </aside>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/index.css?v=2">
+    <script>
+        $(document).ready(function(){
+    $(".login").hide();
+    $(".register").hide();
+    $("#member").click(function(){
+        $(".login").show();
+        $(".register").hide();
+    });
+      $("#new").click(function () {
+        $(".register").show();
+        $(".login").hide();
+        });
+})
+    </script>
+</head>
+<body>
+    <nav>
+        <h1> WEDDING PLANNER </h1>
+        <a href=""> About Us </a>
+        <a href=""> More Information </a>
+    </nav>
+                    <main>
+<div class="greet">
+    <button id="new"> NEW USER?</button>
+    <button id="member"> ALREADY A MEMBER?</button>
+</div>
+ @model ValidateUser
+        <div class="register">
+            <form asp-action="Register" method="post">
+                <span asp-validation-for="first_name"></span>
+                <input asp-for="first_name" placeholder="First Name"/>
+                <span asp-validation-for="last_name"></span>
+                <input asp-for="last_name" placeholder="Last Name"/>
+                <span asp-validation-for="email"></span>
+                <input asp-for="email" placeholder="Email"/>
+                <span asp-validation-for="password"></span>
+                <input asp-for="password" placeholder="Password" />
+                <span asp-validation-for="confirmpassword"></span>
+                <input asp-for="confirmpassword" placeholder="Confirm Password" />
+                <button id="check" type="submit"><img src="~/images/check.png" alt="none"></button>
+            </form>
+        </div>
+        <div class="login">
+            <p style="color:red;"> @ViewBag.Error</p>
+            <form action="/process" method="post">
+                    <input type="text" name="LogEmail" placeholder="Email">
+                <br />
+
+                    <input type="password" name="LogPass" placeholder="Password">
+                <br />
+                <button id="check" type="submit"><img src="~/images/check.png" alt="none"></button>
+            </form>
+        </div>
+        <a href="/"> Go Back </a>
+    </main>
+</body>
+
+</html>

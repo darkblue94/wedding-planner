@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="css/wedding.css">
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
+
+
+
+</head>
+<body>
+
+
+
+
+    <main id="container">
+    @model Weddings
+<div class="nav">
+    <a href="/dashboard">Dashboard</a>
+</div>
+<img src="~/images/wed1.jpeg">
+    <form asp-action="Register_Wedding" method="post">
+    <span asp-validation-for="bride"></span>
+    <label asp-for="bride">Bride </label>
+    <input asp-for="bride" />
+    <br/>
+    <span asp-validation-for="groom"></span>
+    <label asp-for="groom">Groom </label>
+    <input asp-for="groom" />
+    <br/>
+    <span asp-validation-for="date"></span>
+    <label asp-for="date">Date </label>
+<input asp-for="date" type="text" id="datepicker" />
+
+
+
+    <span asp-validation-for="adress"></span>
+    <label asp-for="adress">Adress </label>
+    <input asp-for="adress" />
+    <br/>
+
+
+
+<button id="check" type="submit"><img src="~/images/check.png" alt="none"></button>
+</form>
+
+</main>
+
+</body>
+</html>
